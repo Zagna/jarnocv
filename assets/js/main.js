@@ -18,3 +18,23 @@ supportsWebP.then(supported => {
 		document.body.classList.add("no-webp");
 	}
 });
+
+var suomeksi = document.getElementById('suomeksi');
+
+['click', 'touchend'].forEach(function(e) {
+	suomeksi.addEventListener(e, function() {
+		document.querySelectorAll('[data-fi]').forEach(function(el) {
+			el.innerHTML = el.dataset.fi;
+		});
+	});
+});
+
+var enkuksi = document.getElementById('enkuksi');
+
+['click', 'touchend'].forEach(function(e) {
+	enkuksi.addEventListener(e, function() {
+		document.querySelectorAll('[data-en]').forEach(function(el) {
+			el.innerHTML = el.dataset.en;
+		});
+	});
+});

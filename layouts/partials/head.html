@@ -4,7 +4,7 @@
 <meta name="author" content="Jarno Ruokamo">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ $options := (dict "includePaths" (slice "node_modules/bulma") "outputStyle" "compressed") }}
-{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | resources.PostCSS | resources.Minify }}
+{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | resources.PostCSS }}
 <style>{{ $style.Content | safeCSS }}"</style>
 {{ $fav := resources.Get "img/favicon.png" }}
 {{ $wp := $fav.Resize "48x48 webp" }}

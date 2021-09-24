@@ -6,10 +6,13 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 	nimi = "Jarno Ruokamo"
 	osoite = "jarno.ruokamo.eu"
 	otsikko = "Curriculum Vitae"
+	otsikko_en = "Curriculum Vitae"
 	esitys = "Pesunkestävä rovaniemeläinen, lapsuudesta tietokoneiden kanssa harrastellut insinööri. Kouluissa tutustunut myös elektroniikkaan, tietoliikennetekniikkaan ja ohjelmointiin. Nykyisin pelailun lisäksi hiukan C# ja PHP ohjelmointia harrastuksena."
+	esitys_en = "Born and raised in Rovaniemi, an engineer for whom computers have been my hobby since childhood. Trained in electronics, information technology and programming in school. Todays hobbies are gaming, C# and PHP programming."
 	
 	[params.some]
 		otsikko = "Linkit"
+		otsikko_en = "Links"
 
 		[[params.some.lista]]
 			ikoni = "/assets/svg/email.svg"
@@ -43,22 +46,28 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 
 	[params.kieli]
 		otsikko = "Kielitaito"
+		otsikko_en = "Languages"
 
 		[[params.kieli.lista]]
 			kieli = "Suomi"
 			taso = "Äidinkieli"
+			kieli_en = "Finnish"
+			taso_en = "Native"
 				
 		[[params.kieli.lista]]
 			kieli = "Englanti"
 			taso = "Erinomainen"
+			kieli_en = "English"
+			taso_en = "Excellent"
 
 	[params.tyokokemus]
 		otsikko = "Työkokemus"
+		otsikko_en = "Work experience"
 		ikoni = "/assets/svg/work.svg"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
-			aika = "2019 - *Nykyinen*"
+			aika = "2019 &rarr;"
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 
@@ -88,6 +97,7 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 
 	[params.koulutus]
 		otsikko = "Koulutus"
+		otsikko_en = "Education"
 		ikoni = "/assets/svg/graduation.svg"
 
 		[[params.koulutus.lista]]
@@ -110,16 +120,21 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 
 	[params.projektit]
 		otsikko = "Projektit"
+		otsikko_en = "Projects"
 		ikoni = "/assets/svg/hobby.svg"
 
 		[[params.projektit.lista]]
 			asia = "paint.net suomeksi"
+			asia_en = "paint.net in finnish"
 			url = "https://paint.ruokamo.eu"
 			selitys = "paint.net kuvankäsittelyohjelman suomenkielinen käännös ja ohje."
+			selitys_en = "Finnish translation and guide for the paint.net image editor"
 
 		[[params.projektit.lista]]
 			asia = "OpenRaster Filetype"
+			asia_en = "OpenRaster Filetype"
 			url = "https://github.com/Zagna/openraster_pdn"
 			selitys = "paint.net kuvankäsittelyohjelman lisäosa tiedostotyypin OpenRaster (.ora) avaamiseen ja tallentamiseen."
+			selitys_en = "Plugin for opening and saving OpenRaster (.ora) files for the paint.net image editor"
 
 			

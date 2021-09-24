@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+{{ hugo.Generator }}
+<meta name="language" content="fi">
+<meta name="author" content="Jarno Ruokamo">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ $options := (dict "includePaths" (slice "node_modules/bulma") "outputStyle" "compressed") }}
+{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | resources.PostCSS | resources.Minify }}
+<style>{{ $style.Content | safeCSS }}"</style>
+{{ $fav := resources.Get "img/favicon.png" }}
+{{ $wp := $fav.Resize "48x48 webp" }}
+<link rel="icon" href="data:image/webp;base64,{{ $wp.Content | base64Encode }}" type="image/webp" />
+<link rel="icon" href="data:image/png;base64,{{ $fav.Content | base64Encode }}" type="image/png" />
+<title>{{ .Site.Params.otsikko }}</title>
+<link rel="preconnect" href="https://jarno.goatcounter.com">

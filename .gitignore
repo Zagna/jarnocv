@@ -1,0 +1,10 @@
+*.txt
+!robots.txt
+*.log
+*.exe
+*.zip
+/public
+/resources
+/node_modules
+# Local Netlify folder
+.netlify

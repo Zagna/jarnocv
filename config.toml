@@ -1,0 +1,125 @@
+baseURL = 'https://jarno.ruokamo.eu'
+languageCode = 'fi-fi'
+disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "section", "404" ]
+
+[params]
+	nimi = "Jarno Ruokamo"
+	osoite = "jarno.ruokamo.eu"
+	otsikko = "Curriculum Vitae"
+	esitys = "Pesunkestävä rovaniemeläinen, lapsuudesta tietokoneiden kanssa harrastellut insinööri. Kouluissa tutustunut myös elektroniikkaan, tietoliikennetekniikkaan ja ohjelmointiin. Nykyisin pelailun lisäksi hiukan C# ja PHP ohjelmointia harrastuksena."
+	
+	[params.some]
+		otsikko = "Linkit"
+
+		[[params.some.lista]]
+			ikoni = "/assets/svg/email.svg"
+			url = "mailto:jarno@ruokamo.eu"
+			alt = "Sähköposti"
+
+		[[params.some.lista]]
+			ikoni = "/assets/svg/facebook.svg"
+			url = "https://www.facebook.com/jarno.ruokamo/"
+			alt = "Facebook"
+
+		[[params.some.lista]]
+			ikoni = "/assets/svg/instagram.svg"
+			url = "https://www.instagram.com/zagna85/"
+			alt = "Instagram"
+
+		[[params.some.lista]]
+			ikoni = "/assets/svg/twitter.svg"
+			url = "https://twitter.com/zagna85"
+			alt = "Twitter"
+
+		[[params.some.lista]]
+			ikoni = "/assets/svg/github.svg"
+			url = "https://github.com/Zagna"
+			alt = "Github"
+
+		[[params.some.lista]]
+			ikoni = "/assets/svg/linkedin.svg"
+			url = "https://www.linkedin.com/in/jarno-ruokamo-43507b26/"
+			alt = "Linkedin"
+
+	[params.kieli]
+		otsikko = "Kielitaito"
+
+		[[params.kieli.lista]]
+			kieli = "Suomi"
+			taso = "Äidinkieli"
+				
+		[[params.kieli.lista]]
+			kieli = "Englanti"
+			taso = "Erinomainen"
+
+	[params.tyokokemus]
+		otsikko = "Työkokemus"
+		ikoni = "/assets/svg/work.svg"
+
+		[[params.tyokokemus.lista]]
+			paikka = "Junior Web Developer"
+			aika = "2019 - *Nykyinen*"
+			url = "https://www.hoyry.net"
+			yritys = "Digi- ja mainostoimisto Höyry"
+
+		[[params.tyokokemus.lista]]
+			paikka = "Junior Web Developer"
+			aika = "2019"
+			url = "https://eduro.fi"
+			yritys = "Eduro-säätiö"
+
+		[[params.tyokokemus.lista]]
+			paikka = "Harjoittelija"
+			aika = "2018 - 2019"
+			url = "https://www.hoyry.net"
+			yritys = "Digi- ja mainostoimisto Höyry"
+
+		[[params.tyokokemus.lista]]
+			paikka = "Suunnittelija"
+			aika = "2013 - 2014"
+			url = "https://www.metsa.fi"
+			yritys = "Metsähallitus"
+
+		[[params.tyokokemus.lista]]
+			paikka = "Laboratorioinsinööri, siviilipalvelus"
+			aika = "2011 - 2012"
+			url = "https://www.lapinamk.fi"
+			yritys = "Lapland University of Applied Sciences"
+
+	[params.koulutus]
+		otsikko = "Koulutus"
+		ikoni = "/assets/svg/graduation.svg"
+
+		[[params.koulutus.lista]]
+			tutkinto = "Bachelor of Engineering, Information Technology"
+			koulu = "Lapland University of Applied Sciences"
+			aika = "2007 - 2012"
+			lopputyo = "Arduino Shield Designs for Electronics Laboratory Studies"
+			lopputyon_url = "https://www.theseus.fi/handle/10024/52409"
+
+		[[params.koulutus.lista]]
+			tutkinto = "Sähköalan perustutkinto, Elektroniikan ja tietoliikennetekniikan opetusohjelma"
+			koulu = "Rovaniemen ammattioppilaitos"
+			aika = "2001 - 2006"
+
+		[[params.koulutus.lista]]
+			tutkinto = "Ylioppilastutkinto"
+			koulu = "Rovaniemen aikuislukio"
+			aika = "2001- 2006"
+
+
+	[params.projektit]
+		otsikko = "Projektit"
+		ikoni = "/assets/svg/hobby.svg"
+
+		[[params.projektit.lista]]
+			asia = "paint.net suomeksi"
+			url = "https://paint.ruokamo.eu"
+			selitys = "paint.net kuvankäsittelyohjelman suomenkielinen käännös ja ohje."
+
+		[[params.projektit.lista]]
+			asia = "OpenRaster Filetype"
+			url = "https://github.com/Zagna/openraster_pdn"
+			selitys = "paint.net kuvankäsittelyohjelman lisäosa tiedostotyypin OpenRaster (.ora) avaamiseen ja tallentamiseen."
+
+			

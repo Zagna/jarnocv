@@ -1,0 +1,75 @@
+<div class="container p-4">
+	<div class="columns is-reversed-desktop">
+		<div class="p-4 column">
+			<section class="profiili is-flex is-align-items-center is-flex-direction-column">
+				<h1 class="title">{{ .Site.Params.nimi }}</h1>
+				{{ $image := resources.Get "img/profile.jpg" }}
+				{{ $jpeg := $image.Resize "512x512 jpg" }}
+				{{ $webp := $image.Resize "512x512 webp" }}
+				<picture class="block image is-256x256">
+					<source type="image/webp" srcset="data:image/webp;base64,{{ $webp.Content | base64Encode }}">
+					<img class="is-rounded" src="data:image/jpeg;base64,{{ $jpeg.Content | base64Encode }}" width="256" height="256" alt="Henkilökuva">
+				</picture>
+				<div class="mb-4 level is-flex is-flex-wrap-wrap">
+					{{ range .Site.Params.some.lista }}
+						<a class="level-item" href="{{ .url | safeURL }}">
+							<span class="is-sr-only">{{ .alt }}</span>
+							<figure class="image is-48x48">
+								{{ readFile .ikoni | safeHTML }}
+							</figure>
+						</a>
+					{{ end }}
+				</div>
+			</section>
+			<section class="minusta">
+				<p class="block">{{ .Site.Params.esitys }}</p>
+				<h2 class="mt-5 subtitle">{{ .Site.Params.kieli.otsikko | markdownify }}</h2>
+				{{ range .Site.Params.kieli.lista }}
+					<p>{{ .kieli | markdownify }} &middot; {{ .taso | markdownify }}</p>
+				{{ end }}
+			</section>
+		</div>
+		<div class="p-4 column is-two-thirds">
+			<h3>{{ .Site.Params.osoite }}</h3>
+			<section class="tyokokemus">
+				<h2 class="mt-5 subtitle is-flex is-align-items-center">
+					<span class="mr-3 icon is-medium">{{ readFile .Site.Params.tyokokemus.ikoni | safeHTML }}</span>
+					{{ .Site.Params.tyokokemus.otsikko }}
+				</h2>
+				{{ range .Site.Params.tyokokemus.lista }}
+					<div class="box">
+						<h3 class="is-size-5">{{ .paikka | markdownify }}</h3>
+						<p class="pl-2"><a href="{{ .url | safeURL }}">{{ .yritys | markdownify }}</a> &middot {{ .aika | markdownify }}</p>
+					</div>
+				{{ end }}
+			</section>
+			<section class="koulutus">
+				<h2 class="mt-5 subtitle is-flex is-align-items-center">
+					<span class="mr-3 icon is-medium">{{ readFile .Site.Params.koulutus.ikoni | safeHTML }}</span>
+					{{ .Site.Params.koulutus.otsikko }}
+				</h2>
+				{{ range .Site.Params.koulutus.lista }}
+					<div class="box">
+						<h3 class="is-size-5">{{ .tutkinto | markdownify }}</h3>
+						<p class="pl-2">{{ .koulu | markdownify }} &middot {{ .aika | markdownify }}</p>
+						{{ if .lopputyon_url }}
+							<p class="pl-4">Lopputyö: <a href="{{ .lopputyon_url | safeURL }}"><i>{{ .lopputyo }}</i></a></p>
+						{{ end }}
+					</div>
+				{{ end }}
+			</section>
+			<section class="projektit">
+				<h2 class="mt-5 subtitle is-flex is-align-items-center">
+					<span class="mr-3 icon is-medium">{{ readFile .Site.Params.projektit.ikoni | safeHTML }}</span>
+					{{ .Site.Params.projektit.otsikko }}
+				</h2>
+				{{ range .Site.Params.projektit.lista }}
+					<div class="box">
+						<h3 class="is-size-5"><a href="{{ .url | safeURL }}">{{ .asia | markdownify }}</a></h3>
+						<p class="pl-2">{{ .selitys | markdownify }}</p>
+					</div>
+				{{ end }}
+			</section>
+		</div>
+	</div>
+</div>

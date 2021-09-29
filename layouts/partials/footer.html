@@ -1,4 +1,2 @@
 {{ $js := resources.Get "js/main.js" | js.Build }}
 <script defer>{{ $js.Content | safeJS }}</script>
-<script data-goatcounter="https://jarno.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-<noscript><img src="https://jarno.goatcounter.com/count?p=/test-noscript"></noscript>

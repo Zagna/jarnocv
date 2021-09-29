@@ -3,9 +3,15 @@
 <meta name="language" content="fi">
 <meta name="author" content="Jarno Ruokamo">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{{ $options := (dict "includePaths" (slice "node_modules/bulma") "outputStyle" "compressed") }}
-{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | resources.PostCSS }}
-<style>{{ $style.Content | safeCSS }}"</style>
+{{ if .Site.IsServer }}
+	{{ $options := (dict "includePaths" (slice "node_modules/bulma")) }}
+	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
+	<style>{{ $style.Content | safeCSS }}"</style>
+{{ else }}
+	{{ $options := (dict "includePaths" (slice "node_modules/bulma") "outputStyle" "compressed") }}
+	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | resources.PostCSS }}
+	<style>{{ $style.Content | safeCSS }}"</style>
+{{ end }}
 {{ $fav := resources.Get "img/favicon.png" }}
 {{ $wp := $fav.Resize "48x48 webp" }}
 <link rel="icon" href="data:image/webp;base64,{{ $wp.Content | base64Encode }}" type="image/webp" />

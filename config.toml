@@ -103,6 +103,7 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 		[[params.koulutus.lista]]
 			tutkinto = "Bachelor of Engineering, Information Technology"
 			koulu = "Lapland University of Applied Sciences"
+			url = "https://www.lapinamk.fi"
 			aika = "2007 - 2012"
 			lopputyo = "Arduino Shield Designs for Electronics Laboratory Studies"
 			lopputyon_url = "https://www.theseus.fi/handle/10024/52409"
@@ -110,11 +111,13 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 		[[params.koulutus.lista]]
 			tutkinto = "Sähköalan perustutkinto, Elektroniikan ja tietoliikennetekniikan opetusohjelma"
 			koulu = "Rovaniemen ammattioppilaitos"
+			url = "https://www.redu.fi/fi"
 			aika = "2001 - 2006"
 
 		[[params.koulutus.lista]]
 			tutkinto = "Ylioppilastutkinto"
 			koulu = "Rovaniemen aikuislukio"
+			url = "http://www.rovaniemenaikuislukio.fi/"
 			aika = "2001- 2006"
 
 

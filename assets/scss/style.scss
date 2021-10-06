@@ -136,12 +136,8 @@ $panel-heading-background-color: $grey-dark;
 				order: 1;
 			}
 		}
-		
 	}
-}
-
-.osoite.level {
-	@media(min-width: $tablet) {
+	.osoite.level {
 		h3.level-item {
 			justify-content: start;
 		}

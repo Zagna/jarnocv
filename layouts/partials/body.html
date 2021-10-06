@@ -60,7 +60,7 @@
 				{{ range .Site.Params.koulutus.lista }}
 					<div class="box">
 						<h3 class="is-size-5">{{ .tutkinto | markdownify }}</h3>
-						<p class="pl-2">{{ .koulu | markdownify }} &middot {{ .aika | markdownify }}</p>
+						<p class="pl-2"><a href="{{ .url | safeURL }}">{{ .koulu | markdownify }}</a> &middot {{ .aika | markdownify }}</p>
 						{{ if .lopputyon_url }}
 							<p class="pl-4"><span data-fi="Lopputyö" data-en="Thesis">Lopputyö</span>: <a href="{{ .lopputyon_url | safeURL }}"><i>{{ .lopputyo }}</i></a></p>
 						{{ end }}

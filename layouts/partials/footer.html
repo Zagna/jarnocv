@@ -1,2 +1,2 @@
-{{ $js := resources.Get "js/main.js" | js.Build }}
+{{ $js := resources.Get "js/main.js" | resources.Minify }}
 <script defer>{{ $js.Content | safeJS }}</script>

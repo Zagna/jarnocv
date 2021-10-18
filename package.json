@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0",
-    "bulma": "^0.9",
-    "postcss-cli": "^8.3",
-    "postcss-csso": "^5.0.1"
-  }
-}

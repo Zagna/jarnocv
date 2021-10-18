@@ -4,13 +4,12 @@
 <meta name="author" content="Jarno Ruokamo">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ if .Site.IsServer }}
-	{{ $options := (dict "includePaths" (slice "node_modules/bulma")) }}
-	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
-	<style>{{ $style.Content | safeCSS }}"</style>
+	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS }}
+	<style>{{ $style.Content | safeCSS }}</style>
 {{ else }}
-	{{ $options := (dict "includePaths" (slice "node_modules/bulma") "outputStyle" "compressed") }}
-	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | resources.PostCSS }}
-	<style>{{ $style.Content | safeCSS }}"</style>
+	{{ $options := (dict "outputStyle" "compressed") }}
+	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
+	<style>{{ $style.Content | safeCSS }}</style>
 {{ end }}
 {{ $fav := resources.Get "img/favicon.png" }}
 {{ $wp := $fav.Resize "48x48 webp" }}

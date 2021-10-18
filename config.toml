@@ -118,7 +118,7 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 			tutkinto = "Ylioppilastutkinto"
 			koulu = "Rovaniemen aikuislukio"
 			url = "http://www.rovaniemenaikuislukio.fi/"
-			aika = "2001- 2006"
+			aika = "2001 - 2006"
 
 
 	[params.projektit]

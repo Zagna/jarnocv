@@ -1,5 +1,5 @@
 <aside>
-	<section id="profiili">
+	<div id="profiili">
 		<h1>{{ .Site.Params.nimi }}</h1>
 		{{ $image := resources.Get "img/profile.webp" }}
 		{{ $webp := $image.Resize "512x512 webp" }}
@@ -19,8 +19,8 @@
 				</a>
 			{{ end }}
 		</div>
-	</section>
-	<section id="minusta">
+	</div>
+	<div id="minusta">
 		<p data-fi="{{ .Site.Params.esitys | safeHTMLAttr }}" data-en="{{ .Site.Params.esitys_en | safeHTMLAttr }}">{{ .Site.Params.esitys }}</p>
 		<h2 data-fi="{{ .Site.Params.kieli.otsikko | markdownify | safeHTMLAttr }}" data-en="{{ .Site.Params.kieli.otsikko_en | markdownify | safeHTMLAttr }}">{{ .Site.Params.kieli.otsikko | markdownify }}</h2>
 		{{ range .Site.Params.kieli.lista }}
@@ -28,7 +28,7 @@
 				<span data-fi="{{ .kieli | markdownify | safeHTMLAttr }}" data-en="{{ .kieli_en | markdownify | safeHTMLAttr }}">{{ .kieli | markdownify }}</span> &middot; <span data-fi="{{ .taso | markdownify | safeHTMLAttr }}" data-en="{{ .taso_en | markdownify | safeHTMLAttr }}">{{ .taso | markdownify }}</span>
 			</p>
 		{{ end }}
-	</section>
+	</div>
 </aside>
 <main>
 	<div id="osoite">
@@ -38,7 +38,7 @@
 			<span id="enkuksi">{{ readFile "/assets/svg/gb.svg" | safeHTML }}</span>
 		</div>
 	</div>
-	<section id="tyokokemus">
+	<div id="tyokokemus">
 		<h2>
 			{{ readFile .Site.Params.tyokokemus.ikoni | safeHTML }}
 			<span data-fi="{{ .Site.Params.tyokokemus.otsikko | safeHTMLAttr }}" data-en="{{ .Site.Params.tyokokemus.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.tyokokemus.otsikko }}</span>
@@ -49,8 +49,8 @@
 				<p><a href="{{ .url | safeURL }}">{{ .yritys | markdownify }}</a> &middot {{ .aika | markdownify }}</p>
 			</div>
 		{{ end }}
-	</section>
-	<section id="koulutus">
+	</div>
+	<div id="koulutus">
 		<h2>
 			{{ readFile .Site.Params.koulutus.ikoni | safeHTML }}
 			<span data-fi="{{ .Site.Params.koulutus.otsikko | safeHTMLAttr }}" data-en="{{ .Site.Params.koulutus.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.koulutus.otsikko }}</span>
@@ -64,8 +64,8 @@
 				{{ end }}
 			</div>
 		{{ end }}
-	</section>
-	<section id="projektit">
+	</div>
+	<div id="projektit">
 		<h2>
 			{{ readFile .Site.Params.projektit.ikoni | safeHTML }}
 			<span data-fi="{{ .Site.Params.projektit.otsikko | safeHTMLAttr }}" data-en="{{ .Site.Params.projektit.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.projektit.otsikko }}</span>
@@ -76,5 +76,5 @@
 				<p data-fi="{{ .selitys | markdownify | safeHTMLAttr }}" data-en="{{ .selitys_en | markdownify | safeHTMLAttr }}">{{ .selitys | markdownify }}</p>
 			</div>
 		{{ end }}
-	</section>
+	</div>
 </main>

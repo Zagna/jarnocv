@@ -92,12 +92,15 @@ body {
 		}
 	}
 }
+
 #suomeksi, #enkuksi {
+	cursor: pointer;
 	svg {
 		width: 32px;
 		height: 32px;
 	}
 }
+
 .sr {
 	border: none!important;
     clip: rect(0,0,0,0)!important;
@@ -108,7 +111,6 @@ body {
     white-space: nowrap!important;
     width: .01em!important;
 }
-
 
 @media(min-width: $tablet) {
 	body {

@@ -42,12 +42,10 @@ body {
 	}
 	main {
 		flex: 0 0 61%;
-		section {
-			h2 {
-				svg {
-					height: 2rem;
-					width: 2rem;
-				}
+		h2 {
+			svg {
+				height: 2rem;
+				width: 2rem;
 			}
 		}
 	}

@@ -66,8 +66,14 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 		ikoni = "/assets/svg/work.svg"
 
 		[[params.tyokokemus.lista]]
+			paikka = "Web Developer"
+			aika = "2021 &rarr;"
+			url = "https://www.hoyry.net"
+			yritys = "Digi- ja mainostoimisto Höyry"
+
+		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
-			aika = "2019 &rarr;"
+			aika = "2019 - 2021"
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 
@@ -101,7 +107,15 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 		ikoni = "/assets/svg/graduation.svg"
 
 		[[params.koulutus.lista]]
-			tutkinto = "Bachelor of Engineering, Information Technology"
+			tutkinto = "Liiketoiminnan ammattitutkinto"
+			tarkennus = "Myynnin ja markkinointiviestinnän osaamisala"
+			koulu = "Rastor-instituutti"
+			url = "https://www.rastorinst.fi"
+			aika = "2019 - 2021"
+
+		[[params.koulutus.lista]]
+			tutkinto = "Bachelor of Engineering"
+			tarkennus = "Degree Programme in Information Technology"
 			koulu = "Lapland University of Applied Sciences"
 			url = "https://www.lapinamk.fi"
 			aika = "2007 - 2012"
@@ -109,15 +123,16 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 			lopputyon_url = "https://www.theseus.fi/handle/10024/52409"
 
 		[[params.koulutus.lista]]
-			tutkinto = "Sähköalan perustutkinto, Elektroniikan ja tietoliikennetekniikan opetusohjelma"
+			tutkinto = "Sähköalan perustutkinto"
+			tarkennus = "Elektroniikan ja tietoliikennetekniikan opetusohjelma"
 			koulu = "Rovaniemen ammattioppilaitos"
-			url = "https://www.redu.fi/fi"
+			url = "https://redu.fi"
 			aika = "2001 - 2006"
 
 		[[params.koulutus.lista]]
 			tutkinto = "Ylioppilastutkinto"
 			koulu = "Rovaniemen aikuislukio"
-			url = "http://www.rovaniemenaikuislukio.fi/"
+			url = "http://www.rovaniemenaikuislukio.fi"
 			aika = "2001 - 2006"
 
 

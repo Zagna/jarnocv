@@ -73,7 +73,7 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 
 		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
-			aika = "2019 - 2021"
+			aika = "2020 - 2021"
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 
@@ -111,7 +111,7 @@ disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "secti
 			tarkennus = "Myynnin ja markkinointiviestinnän osaamisala"
 			koulu = "Rastor-instituutti"
 			url = "https://www.rastorinst.fi"
-			aika = "2019 - 2021"
+			aika = "2020 - 2021"
 
 		[[params.koulutus.lista]]
 			tutkinto = "Bachelor of Engineering"

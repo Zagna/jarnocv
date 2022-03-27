@@ -10,13 +10,10 @@
 	{{ $options := (dict "outputStyle" "compressed") }}
 	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
 	<style>{{ $style.Content | safeCSS }}</style>
+	<link rel="preconnect" href="https://jarno.goatcounter.com">
 {{ end }}
 {{ $fav := resources.Get "img/favicon.png" }}
 {{ $wp := $fav.Resize "48x48 webp" }}
 <link rel="icon" href="data:image/webp;base64,{{ $wp.Content | base64Encode }}" type="image/webp" />
 <link rel="icon" href="data:image/png;base64,{{ $fav.Content | base64Encode }}" type="image/png" />
 <title>{{ .Site.Params.otsikko }}</title>
-{{ if not .Site.IsServer }}
-	<script data-goatcounter="https://jarno.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-	<link rel="preconnect" href="https://jarno.goatcounter.com">
-{{ end }}

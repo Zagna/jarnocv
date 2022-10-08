@@ -16,4 +16,4 @@ jobs:
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
         if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
     - name: hugo
-      run: ssh ${{ secrets.SSH_ADDRESS }} 'cd ${{ secrets.DIR }} && git pull && hugo -b "${{ secrets.URL }}"'
+      run: ssh ${{ secrets.SSH_ADDRESS }} 'cd ${{ secrets.DIR }} && git pull && pwd && hugo -b "${{ secrets.URL }}"'

@@ -20,4 +20,4 @@ function changeLanguage(lang) {
 	});
 }
 
-if (navigator.language != 'fi') changeLanguage('en');
+if (!navigator.language.includes('fi')) changeLanguage('en');

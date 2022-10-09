@@ -14,6 +14,7 @@ html {
 	font-family: 'Calibri', 'Trebuchet MS', sans-serif;
 	background-color: var(--background);
 	color: var(--text);
+
 	a {
 		color: var(--green);
 	}
@@ -23,9 +24,11 @@ h1, h2, h3, p {
 	padding: 0;
 	margin: 0;
 }
+
 p {
 	padding: .25rem 0;
 }
+
 h2 {
 	padding: .5rem 0;
 }
@@ -37,13 +40,16 @@ body {
 	padding: 2rem;
 	justify-content: space-between;
 	margin: 0 auto;
+
 	aside {
 		flex: 0 0 34%;
 	}
+
 	main {
 		flex: 0 0 61%;
+
 		h2 {
-			svg {
+			img {
 				height: 2rem;
 				width: 2rem;
 				margin-right: .5rem;
@@ -52,7 +58,9 @@ body {
 	}
 }
 
-#tyokokemus, #koulutus, #projektit {
+#tyokokemus,
+#koulutus,
+#projektit {
 	div {
 		padding: 1rem;
 		margin: 1rem 0;
@@ -63,27 +71,33 @@ body {
 
 #osoite {
 	display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 #profiili {
 	display: flex;
-    flex-direction: column;
-    align-items: center;
+	flex-direction: column;
+	align-items: center;
+
 	h1 {
 		font-size: 150%;
 	}
+
 	picture {
 		padding: 2rem 0;
+
 		img {
 			border-radius: 50%;
 		}
 	}
+
 	div {
 		display: flex;
 		flex-wrap: wrap;
+
 		a {
 			flex: 0 0 33%;
+
 			figure {
 				margin: 0;
 				text-align: center;
@@ -92,9 +106,11 @@ body {
 	}
 }
 
-#suomeksi, #enkuksi {
+#suomeksi,
+#enkuksi {
 	cursor: pointer;
-	svg {
+
+	img {
 		width: 32px;
 		height: 32px;
 		margin-left: .5rem;
@@ -102,27 +118,30 @@ body {
 }
 
 .sr {
-	border: none!important;
-    clip: rect(0,0,0,0)!important;
-    height: .01em!important;
-    overflow: hidden!important;
-    padding: 0!important;
-    position: absolute!important;
-    white-space: nowrap!important;
-    width: .01em!important;
+	border: none !important;
+	clip: rect(0, 0, 0, 0) !important;
+	height: .01em !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	width: .01em !important;
 }
 
 @media(min-width: $tablet) {
 	body {
 		flex-direction: row;
 	}
+
 	aside {
 		order: 2;
 	}
+
 	main {
 		order: 1;
 	}
 }
+
 @media(max-width: $tablet) {
 	main {
 		margin-top: 2rem;

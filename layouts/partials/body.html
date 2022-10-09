@@ -5,8 +5,8 @@
 		{{ $webp := $image.Resize "512x512 webp" }}
 		{{ $jpeg := $image.Resize "512x512 jpeg" }}
 		<picture>
-			<source type="image/webp" srcset="data:image/webp;base64,{{ $webp.Content | base64Encode }}">
-			<img src="data:image/jpeg;base64,{{ $jpeg.Content | base64Encode }}" width="256" height="256" alt="Henkilökuva">
+			<source type="image/webp" srcset="{{ $webp.RelPermalink }}">
+			<img src="{{ $jpeg.RelPermalink }}" width="256" height="256" alt="Henkilökuva">
 		</picture>
 		<h2 class="sr" data-fi="{{ .Site.Params.some.otsikko | safeHTMLAttr }}" data-en="{{ .Site.Params.some.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.some.otsikko }}</h2>
 		<div>
@@ -14,7 +14,8 @@
 				<a href="{{ .url | safeURL }}">
 					<span class="sr">{{ .alt }}</span>
 					<figure>
-						{{ readFile .ikoni | safeHTML }}
+						{{ $ikoni := resources.Get .ikoni }}
+						<img src="{{ $ikoni.RelPermalink }}" width="48" height="48" alt="{{ .alt }}">
 					</figure>
 				</a>
 			{{ end }}
@@ -34,13 +35,16 @@
 	<div id="osoite">
 		<h3>{{ .Site.Params.osoite }}</h3>
 		<div>
-			<span id="suomeksi">{{ readFile "/assets/svg/fi.svg" | safeHTML }}</span>
-			<span id="enkuksi">{{ readFile "/assets/svg/gb.svg" | safeHTML }}</span>
+			{{ $fi := resources.Get "svg/fi.svg" }}
+			{{ $gb := resources.Get "svg/gb.svg" }}
+			<span id="suomeksi"><img src="{{ $fi.RelPermalink }}" width="32" height="32" alt="suomeksi"></span>
+			<span id="enkuksi"><img src="{{ $gb.RelPermalink }}" width="32" height="32" alt="in english"></span>
 		</div>
 	</div>
 	<div id="tyokokemus">
 		<h2>
-			{{ readFile .Site.Params.tyokokemus.ikoni | safeHTML }}
+			{{ $tyokokemus := resources.Get .Site.Params.tyokokemus.ikoni }}
+			<img src="{{ $tyokokemus.RelPermalink }}" width="32" height="32" alt="työkokemus">
 			<span data-fi="{{ .Site.Params.tyokokemus.otsikko | safeHTMLAttr }}" data-en="{{ .Site.Params.tyokokemus.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.tyokokemus.otsikko }}</span>
 		</h2>
 		{{ range .Site.Params.tyokokemus.lista }}
@@ -52,7 +56,8 @@
 	</div>
 	<div id="koulutus">
 		<h2>
-			{{ readFile .Site.Params.koulutus.ikoni | safeHTML }}
+			{{ $koulutus := resources.Get .Site.Params.koulutus.ikoni }}
+			<img src="{{ $koulutus.RelPermalink }}" width="32" height="32" alt="koulutus">
 			<span data-fi="{{ .Site.Params.koulutus.otsikko | safeHTMLAttr }}" data-en="{{ .Site.Params.koulutus.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.koulutus.otsikko }}</span>
 		</h2>
 		{{ range .Site.Params.koulutus.lista }}
@@ -67,7 +72,8 @@
 	</div>
 	<div id="projektit">
 		<h2>
-			{{ readFile .Site.Params.projektit.ikoni | safeHTML }}
+			{{ $projektit := resources.Get .Site.Params.projektit.ikoni }}
+			<img src="{{ $projektit.RelPermalink }}" width="32" height="32" alt="projektit">
 			<span data-fi="{{ .Site.Params.projektit.otsikko | safeHTMLAttr }}" data-en="{{ .Site.Params.projektit.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.projektit.otsikko }}</span>
 		</h2>
 		{{ range .Site.Params.projektit.lista }}

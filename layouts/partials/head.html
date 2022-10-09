@@ -3,17 +3,18 @@
 <meta name="language" content="fi">
 <meta name="author" content="Jarno Ruokamo">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="{{ .Permalink }}" />
 {{ if .Site.IsServer }}
 	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS }}
-	<style>{{ $style.Content | safeCSS }}</style>
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 {{ else }}
 	{{ $options := (dict "outputStyle" "compressed") }}
 	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
-	<style>{{ $style.Content | safeCSS }}</style>
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 	<link rel="preconnect" href="https://jarno.goatcounter.com">
 {{ end }}
 {{ $fav := resources.Get "img/favicon.png" }}
 {{ $wp := $fav.Resize "48x48 webp" }}
-<link rel="icon" href="data:image/webp;base64,{{ $wp.Content | base64Encode }}" type="image/webp" />
-<link rel="icon" href="data:image/png;base64,{{ $fav.Content | base64Encode }}" type="image/png" />
+<link rel="icon" href="{{ $wp.RelPermalink }}" type="image/webp" />
+<link rel="icon" href="{{ $fav.RelPermalink }}" type="image/png" />
 <title>{{ .Site.Params.otsikko }}</title>

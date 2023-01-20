@@ -1,5 +1,5 @@
 {{ $js := resources.Get "js/main.js" }}
-<script defer>{{ $js.Content | safeJS }}</script>
+<script>{{ $js.Content | safeJS }}</script>
 {{ if not .Site.IsServer }}
 	<script data-goatcounter="https://jarno.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 {{ end }}

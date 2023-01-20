@@ -50,7 +50,7 @@
 		{{ range .Site.Params.tyokokemus.lista }}
 			<div>
 				<h3>{{ .paikka | markdownify }}</h3>
-				<p><a href="{{ .url | safeURL }}">{{ .yritys | markdownify }}</a> &middot {{ .aika | markdownify }}</p>
+				<p><a href="{{ .url | safeURL }}">{{ .yritys | markdownify }}</a> &middot; {{ .aika | markdownify }}</p>
 			</div>
 		{{ end }}
 	</div>
@@ -63,7 +63,7 @@
 		{{ range .Site.Params.koulutus.lista }}
 			<div>
 				<h3>{{ .tutkinto | markdownify }}{{ with .tarkennus }} &middot; <small>{{ . }}</small>{{ end }}</h3>
-				<p><a href="{{ .url | safeURL }}">{{ .koulu | markdownify }}</a> &middot {{ .aika | markdownify }}</p>
+				<p><a href="{{ .url | safeURL }}">{{ .koulu | markdownify }}</a> &middot; {{ .aika | markdownify }}</p>
 				{{ if .lopputyon_url }}
 					<p><span data-fi="Lopputyö" data-en="Thesis">Lopputyö</span>: <a href="{{ .lopputyon_url | safeURL }}"><i>{{ .lopputyo }}</i></a></p>
 				{{ end }}

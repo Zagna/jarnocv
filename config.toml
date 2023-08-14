@@ -1,6 +1,6 @@
 baseURL = 'https://jarno.ruokamo.eu'
 languageCode = 'fi-fi'
-disableKinds = [ "RSS", "tags", "categories", "taxonomy", "taxonomyTerm", "section", "404" ]
+disableKinds = [ "RSS", "taxonomy", "section", "404" ]
 enableGitInfo = true
 
 [params]

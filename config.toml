@@ -31,9 +31,9 @@ enableGitInfo = true
 			alt = "Instagram"
 
 		[[params.some.lista]]
-			ikoni = "svg/twitter.svg"
-			url = "https://twitter.com/zagna85"
-			alt = "Twitter"
+			ikoni = "svg/x.svg"
+			url = "https://x.com/zagna85"
+			alt = "X"
 
 		[[params.some.lista]]
 			ikoni = "svg/github.svg"

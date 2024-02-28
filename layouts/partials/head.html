@@ -12,7 +12,6 @@
 	{{ $options := (dict "outputStyle" "compressed") }}
 	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-	<link rel="preconnect" href="https://jarno.goatcounter.com">
 {{ end }}
 {{ $fav := resources.Get "img/favicon.png" }}
 {{ $wp := $fav.Resize "48x48 webp" }}

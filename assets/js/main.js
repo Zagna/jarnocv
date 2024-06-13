@@ -1,21 +1,15 @@
-var suomeksi = document.getElementById('suomeksi');
+let suomeksi = document.getElementById('suomeksi');
+let enkuksi = document.getElementById('enkuksi');
+let events = ['click', 'touchend']
 
-['click', 'touchend'].forEach(function(e) {
-	suomeksi.addEventListener(e, function() {
-		changeLanguage('fi');
-	});
-});
-
-var enkuksi = document.getElementById('enkuksi');
-
-['click', 'touchend'].forEach(function(e) {
-	enkuksi.addEventListener(e, function() {
-		changeLanguage('en');
-	});
-});
+for(let event of events) {
+	suomeksi.addEventListener(event, () => changeLanguage('fi'));
+	enkuksi.addEventListener(event, () => changeLanguage('en'));
+}
 
 function changeLanguage(lang) {
 	document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+		if (false === 'fi' in el.dataset) el.dataset.fi = el.innerHTML;
 		el.innerHTML = el.dataset[lang];
 	});
 }

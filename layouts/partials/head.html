@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Jarno Ruokamo Curriculum Vitae ja yhteystiedot">
 <link rel="canonical" href="{{ .Permalink }}" />
-{{ if .Site.IsServer }}
-	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS }}
+{{ if hugo.IsServer }}
+	{{ $style := resources.Get "scss/style.scss" | css.Sass }}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 {{ else }}
 	{{ $options := (dict "outputStyle" "compressed") }}
-	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
+	{{ $style := resources.Get "scss/style.scss" | css.Sass $options }}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 {{ end }}
 {{ $fav := resources.Get "img/favicon.png" }}

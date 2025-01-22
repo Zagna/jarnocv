@@ -18,32 +18,32 @@ enableGitInfo = true
 		[[params.some.lista]]
 			ikoni = "svg/email.svg"
 			url = "mailto:jarno@ruokamo.eu"
-			alt = "Sähköposti"
+			name = "Sähköposti"
 
 		[[params.some.lista]]
 			ikoni = "svg/facebook.svg"
 			url = "https://www.facebook.com/jarno.ruokamo/"
-			alt = "Facebook"
+			name = "Facebook"
 
 		[[params.some.lista]]
 			ikoni = "svg/instagram.svg"
 			url = "https://www.instagram.com/zagna85/"
-			alt = "Instagram"
+			name = "Instagram"
 
 		[[params.some.lista]]
 			ikoni = "svg/x.svg"
 			url = "https://x.com/zagna85"
-			alt = "X"
+			name = "X"
 
 		[[params.some.lista]]
 			ikoni = "svg/github.svg"
 			url = "https://github.com/Zagna"
-			alt = "Github"
+			name = "Github"
 
 		[[params.some.lista]]
 			ikoni = "svg/linkedin.svg"
 			url = "https://www.linkedin.com/in/jarno-ruokamo/"
-			alt = "Linkedin"
+			name = "Linkedin"
 
 	[params.kieli]
 		otsikko = "Kielitaito"

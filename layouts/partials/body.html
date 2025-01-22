@@ -12,9 +12,9 @@
 		<some-list>
 			{{ range .Site.Params.some.lista }}
 				<a target="_blank" href="{{ .url | safeURL }}">
-					<span class="sr">{{ .alt }}</span>
+					<span class="sr">{{ .name }}</span>
 					{{ $ikoni := resources.Get .ikoni }}
-					<img src="{{ $ikoni.RelPermalink }}" width="48" height="48" alt="{{ .alt }}">
+					<img src="{{ $ikoni.RelPermalink }}" width="48" height="48" alt="">
 				</a>
 			{{ end }}
 		</some-list>

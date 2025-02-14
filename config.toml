@@ -71,36 +71,42 @@ enableGitInfo = true
 			aika = "2021 &rarr;"
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
+			logo = "svg/hoyry.svg"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
 			aika = "2020 - 2021"
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
+			logo = "svg/hoyry.svg"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
 			aika = "2019"
 			url = "https://eduro.fi"
 			yritys = "Eduro-säätiö"
+			logo = "svg/eduro.svg"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Harjoittelija"
 			aika = "2018 - 2019"
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
+			logo = "svg/hoyry.svg"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Suunnittelija"
 			aika = "2013 - 2014"
 			url = "https://www.metsa.fi"
 			yritys = "Metsähallitus"
+			logo = "svg/metsa.svg"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Laboratorioinsinööri, siviilipalvelus"
 			aika = "2011 - 2012"
 			url = "https://www.lapinamk.fi"
 			yritys = "Lapland University of Applied Sciences"
+			logo = "svg/ramk.svg"
 
 	[params.koulutus]
 		otsikko = "Koulutus"
@@ -113,6 +119,7 @@ enableGitInfo = true
 			koulu = "Rastor-instituutti"
 			url = "https://www.rastorinst.fi"
 			aika = "2020 - 2021"
+			logo = "svg/rastor.svg"
 
 		[[params.koulutus.lista]]
 			tutkinto = "Bachelor of Engineering"
@@ -122,20 +129,22 @@ enableGitInfo = true
 			aika = "2007 - 2012"
 			lopputyo = "Arduino Shield Designs for Electronics Laboratory Studies"
 			lopputyon_url = "https://www.theseus.fi/handle/10024/52409"
+			logo = "svg/ramk.svg"
 
 		[[params.koulutus.lista]]
 			tutkinto = "Sähköalan perustutkinto"
 			tarkennus = "Elektroniikan ja tietoliikennetekniikan opetusohjelma"
-			koulu = "Rovaniemen ammattioppilaitos"
+			koulu = "Lapin ammattioppilaitos"
 			url = "https://redu.fi"
 			aika = "2001 - 2006"
+			logo = "svg/redu.svg"
 
 		[[params.koulutus.lista]]
 			tutkinto = "Ylioppilastutkinto"
 			koulu = "Rovaniemen aikuislukio"
 			url = "http://www.rovaniemenaikuislukio.fi"
 			aika = "2001 - 2006"
-
+			logo = "svg/lukio.svg"
 
 	[params.projektit]
 		otsikko = "Projektit"

@@ -45,6 +45,10 @@
 		</h2>
 		{{ range .Site.Params.tyokokemus.lista }}
 			<item-list>
+				{{ with .logo }}
+					{{ $ikoni := resources.Get . }}
+					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
+				{{ end }}
 				<h3>{{ .paikka | markdownify }}</h3>
 				<p><a href="{{ .url | safeURL }}">{{ .yritys | markdownify }}</a> &middot; {{ .aika | markdownify }}</p>
 			</item-list>
@@ -58,6 +62,10 @@
 		</h2>
 		{{ range .Site.Params.koulutus.lista }}
 			<item-list>
+				{{ with .logo }}
+					{{ $ikoni := resources.Get . }}
+					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
+				{{ end }}
 				<h3>{{ .tutkinto | markdownify }}{{ with .tarkennus }} &middot; <small>{{ . }}</small>{{ end }}</h3>
 				<p><a href="{{ .url | safeURL }}">{{ .koulu | markdownify }}</a> &middot; {{ .aika | markdownify }}</p>
 				{{ if .lopputyon_url }}

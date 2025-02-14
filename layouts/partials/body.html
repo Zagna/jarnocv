@@ -2,8 +2,8 @@
 	<my-profile>
 		<h1>{{ .Site.Params.nimi }}</h1>
 		{{ $image := resources.Get "img/profile.webp" }}
-		{{ $webp := $image.Resize "512x512 webp" }}
-		{{ $jpeg := $image.Resize "512x512 jpeg" }}
+		{{ $webp := $image.Resize "512x512 webp" | fingerprint }}
+		{{ $jpeg := $image.Resize "512x512 jpeg" | fingerprint }}
 		<picture>
 			<source type="image/webp" srcset="{{ $webp.RelPermalink }}">
 			<img src="{{ $jpeg.RelPermalink }}" width="256" height="256" alt="Henkilökuva">
@@ -13,7 +13,7 @@
 			{{ range .Site.Params.some.lista }}
 				<a target="_blank" href="{{ .url | safeURL }}">
 					<span class="sr">{{ .name }}</span>
-					{{ $ikoni := resources.Get .ikoni }}
+					{{ $ikoni := resources.Get .ikoni | fingerprint }}
 					<img src="{{ $ikoni.RelPermalink }}" width="48" height="48" alt="">
 				</a>
 			{{ end }}
@@ -31,22 +31,22 @@
 	<site-address>
 		<h3>{{ .Site.Params.osoite }}</h3>
 		<language-selector>
-			{{ $fi := resources.Get "svg/fi.svg" }}
-			{{ $gb := resources.Get "svg/gb.svg" }}
+			{{ $fi := resources.Get "svg/fi.svg" | fingerprint }}
+			{{ $gb := resources.Get "svg/gb.svg" | fingerprint }}
 			<button type="button" id="suomeksi"><img src="{{ $fi.RelPermalink }}" width="32" height="32" alt="suomeksi"></button>
 			<button type="button" id="enkuksi"><img src="{{ $gb.RelPermalink }}" width="32" height="32" alt="in english"></button>
 		</language-selector>
 	</site-address>
 	<work-experience>
 		<h2>
-			{{ $tyokokemus := resources.Get .Site.Params.tyokokemus.ikoni }}
+			{{ $tyokokemus := resources.Get .Site.Params.tyokokemus.ikoni | fingerprint }}
 			<img src="{{ $tyokokemus.RelPermalink }}" width="32" height="32" alt="työkokemus">
 			<span data-en="{{ .Site.Params.tyokokemus.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.tyokokemus.otsikko }}</span>
 		</h2>
 		{{ range .Site.Params.tyokokemus.lista }}
 			<item-list>
 				{{ with .logo }}
-					{{ $ikoni := resources.Get . }}
+					{{ $ikoni := resources.Get . | fingerprint }}
 					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
 				{{ end }}
 				<h3>{{ .paikka | markdownify }}</h3>
@@ -56,14 +56,14 @@
 	</work-experience>
 	<school-work>
 		<h2>
-			{{ $koulutus := resources.Get .Site.Params.koulutus.ikoni }}
+			{{ $koulutus := resources.Get .Site.Params.koulutus.ikoni | fingerprint }}
 			<img src="{{ $koulutus.RelPermalink }}" width="32" height="32" alt="koulutus">
 			<span data-en="{{ .Site.Params.koulutus.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.koulutus.otsikko }}</span>
 		</h2>
 		{{ range .Site.Params.koulutus.lista }}
 			<item-list>
 				{{ with .logo }}
-					{{ $ikoni := resources.Get . }}
+					{{ $ikoni := resources.Get . | fingerprint }}
 					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
 				{{ end }}
 				<h3>{{ .tutkinto | markdownify }}{{ with .tarkennus }} &middot; <small>{{ . }}</small>{{ end }}</h3>
@@ -76,7 +76,7 @@
 	</school-work>
 	<my-hobbies>
 		<h2>
-			{{ $projektit := resources.Get .Site.Params.projektit.ikoni }}
+			{{ $projektit := resources.Get .Site.Params.projektit.ikoni | fingerprint }}
 			<img src="{{ $projektit.RelPermalink }}" width="32" height="32" alt="projektit">
 			<span data-en="{{ .Site.Params.projektit.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.projektit.otsikko }}</span>
 		</h2>

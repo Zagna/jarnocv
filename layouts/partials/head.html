@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 {{ else }}
 	{{ $options := (dict "outputStyle" "compressed") }}
-	{{ $style := resources.Get "scss/style.scss" | css.Sass $options }}
+	{{ $style := resources.Get "scss/style.scss" | css.Sass $options | fingerprint }}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 {{ end }}
 {{ $fav := resources.Get "img/favicon.png" }}

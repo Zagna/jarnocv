@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+* {
+	box-sizing: border-box;
+}
+
 $mobile: 380px;
 $tablet: 768px;
 
@@ -28,6 +32,7 @@ h1, h2, h3, p {
 
 p {
 	padding: .25rem 0;
+	hyphens: auto;
 }
 
 h2 {
@@ -135,9 +140,11 @@ my-profile {
 	some-list {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 
 		a {
-			flex: 0 0 33%;
+			flex-basis: calc(max(72px, 33%));
 			margin: 0;
 			text-align: center;
 		}

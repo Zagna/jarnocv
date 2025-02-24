@@ -8,7 +8,7 @@
 			<source type="image/webp" srcset="{{ $webp.RelPermalink }}">
 			<img src="{{ $jpeg.RelPermalink }}" width="256" height="256" alt="Henkilökuva">
 		</picture>
-		<h2 class="sr" data-en="{{ .Site.Params.some.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.some.otsikko }}</h2>
+		<h2 class="sr">{{ .Site.Params.otsikko }}</h2>
 		<some-list>
 			{{ range .Site.Params.some.lista }}
 				<a target="_blank" href="{{ .url | safeURL }}">
@@ -20,10 +20,10 @@
 		</some-list>
 	</my-profile>
 	<about-me>
-		<p data-en="{{ .Site.Params.esitys_en | safeHTMLAttr }}">{{ .Site.Params.esitys }}</p>
-		<h2 data-en="{{ .Site.Params.kieli.otsikko_en | markdownify | safeHTMLAttr }}">{{ .Site.Params.kieli.otsikko | markdownify }}</h2>
+		<p data-en="{{ .Site.Params.esitys.en | safeHTMLAttr }}">{{ .Site.Params.esitys.fi }}</p>
+		<h2 data-en="{{ .Site.Params.kieli.otsikko.en | markdownify | safeHTMLAttr }}">{{ .Site.Params.kieli.otsikko.fi | markdownify }}</h2>
 		{{ range .Site.Params.kieli.lista }}
-			<p data-en="{{ .kieli_en | markdownify | safeHTMLAttr }} &middot; {{ .taso_en | markdownify | safeHTMLAttr }}">{{ .kieli | markdownify }} &middot; {{ .taso | markdownify }}</p>
+			<p data-en="{{ .kieli.en | markdownify | safeHTMLAttr }} &middot; {{ .taso.en | markdownify | safeHTMLAttr }}">{{ .kieli.fi | markdownify }} &middot; {{ .taso.fi | markdownify }}</p>
 		{{ end }}
 	</about-me>
 </aside>
@@ -41,7 +41,7 @@
 		<h2>
 			{{ $tyokokemus := resources.Get .Site.Params.tyokokemus.ikoni | fingerprint }}
 			<img src="{{ $tyokokemus.RelPermalink }}" width="32" height="32" alt="työkokemus">
-			<span data-en="{{ .Site.Params.tyokokemus.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.tyokokemus.otsikko }}</span>
+			<span data-en="{{ .Site.Params.tyokokemus.otsikko.en | safeHTMLAttr }}">{{ .Site.Params.tyokokemus.otsikko.fi }}</span>
 		</h2>
 		{{ range .Site.Params.tyokokemus.lista }}
 			<item-list>
@@ -50,7 +50,16 @@
 					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
 				{{ end }}
 				<h3>{{ .paikka | markdownify }}</h3>
-				<p><a href="{{ .url | safeURL }}">{{ .yritys | markdownify }}</a> &middot; {{ .aika | markdownify }}</p>
+				<p>
+					{{ if .url }}
+						<a href="{{ .url | safeURL }}">
+					{{ end }}
+						{{ .yritys | markdownify }}
+					{{ if .url }}
+						</a>
+					{{ end }}
+						&middot; {{ .aika | markdownify }}
+				</p>
 			</item-list>
 		{{ end }}
 	</work-experience>
@@ -58,7 +67,7 @@
 		<h2>
 			{{ $koulutus := resources.Get .Site.Params.koulutus.ikoni | fingerprint }}
 			<img src="{{ $koulutus.RelPermalink }}" width="32" height="32" alt="koulutus">
-			<span data-en="{{ .Site.Params.koulutus.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.koulutus.otsikko }}</span>
+			<span data-en="{{ .Site.Params.koulutus.otsikko.en | safeHTMLAttr }}">{{ .Site.Params.koulutus.otsikko.fi }}</span>
 		</h2>
 		{{ range .Site.Params.koulutus.lista }}
 			<item-list>
@@ -67,7 +76,16 @@
 					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
 				{{ end }}
 				<h3>{{ .tutkinto | markdownify }}{{ with .tarkennus }} &middot; <small>{{ . }}</small>{{ end }}</h3>
-				<p><a href="{{ .url | safeURL }}">{{ .koulu | markdownify }}</a> &middot; {{ .aika | markdownify }}</p>
+				<p>
+					{{ if .url }}
+						<a href="{{ .url | safeURL }}">
+					{{ end }}
+					{{ .koulu | markdownify }}
+					{{ if .url }}
+						</a>
+					{{ end }}
+					 &middot; {{ .aika | markdownify }}
+				</p>
 				{{ if .lopputyon_url }}
 					<p><span data-en="Thesis">Lopputyö</span>: <a href="{{ .lopputyon_url | safeURL }}"><i>{{ .lopputyo }}</i></a></p>
 				{{ end }}
@@ -78,12 +96,12 @@
 		<h2>
 			{{ $projektit := resources.Get .Site.Params.projektit.ikoni | fingerprint }}
 			<img src="{{ $projektit.RelPermalink }}" width="32" height="32" alt="projektit">
-			<span data-en="{{ .Site.Params.projektit.otsikko_en | safeHTMLAttr }}">{{ .Site.Params.projektit.otsikko }}</span>
+			<span data-en="{{ .Site.Params.projektit.otsikko.en | safeHTMLAttr }}">{{ .Site.Params.projektit.otsikko.fi }}</span>
 		</h2>
 		{{ range .Site.Params.projektit.lista }}
 			<item-list>
-				<h3><a data-en="{{ .asia_en | markdownify | safeHTMLAttr }}" href="{{ .url | safeURL }}">{{ .asia | markdownify }}</a></h3>
-				<p data-en="{{ .selitys_en | markdownify | safeHTMLAttr }}">{{ .selitys | markdownify }}</p>
+				<h3><a data-en="{{ .asia.en | markdownify | safeHTMLAttr }}" href="{{ .url | safeURL }}">{{ .asia.fi | markdownify }}</a></h3>
+				<p data-en="{{ .selitys.en | markdownify | safeHTMLAttr }}">{{ .selitys.fi | markdownify }}</p>
 			</item-list>
 		{{ end }}
 	</my-hobbies>

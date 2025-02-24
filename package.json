@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "hugo",
+    "create": "hugo new",
+    "serve": "hugo server"
+  },
+  "devDependencies": {
+    "hugo-extended": "^0.144.2"
+  }
+}

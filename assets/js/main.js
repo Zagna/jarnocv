@@ -7,9 +7,12 @@ for(let event of events) {
 	enkuksi.addEventListener(event, () => changeLanguage('en'));
 }
 
+document.querySelectorAll('[data-en]').forEach(function(el) {
+	el.dataset.fi = el.innerHTML;
+});
+
 function changeLanguage(lang) {
 	document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
-		if (false === 'fi' in el.dataset) el.dataset.fi = el.innerHTML;
 		el.innerHTML = el.dataset[lang];
 	});
 }

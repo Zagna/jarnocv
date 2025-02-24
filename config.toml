@@ -3,17 +3,20 @@ languageCode = 'fi-fi'
 disableKinds = [ "RSS", "taxonomy", "section", "404" ]
 enableGitInfo = true
 
+[minify]
+	minifyOutput = true
+
 [params]
 	nimi = "Jarno Ruokamo"
 	osoite = "jarno.ruokamo.eu"
 	otsikko = "Curriculum Vitae"
-	otsikko_en = "Curriculum Vitae"
-	esitys = "Pesunkestävä rovaniemeläinen, lapsuudesta tietokoneiden kanssa harrastellut insinööri. Kouluissa tutustunut myös elektroniikkaan, tietoliikennetekniikkaan ja ohjelmointiin. Nykyisin pelailun lisäksi hiukan C# ja PHP ohjelmointia harrastuksena."
-	esitys_en = "Born and raised in Rovaniemi, an engineer for whom computers have been my hobby since childhood. Trained in electronics, information technology and programming in school. Todays hobbies are gaming, C# and PHP programming."
+	[params.esitys]
+		fi = "Pesunkestävä rovaniemeläinen, lapsuudesta tietokoneiden kanssa harrastellut insinööri. Kouluissa tutustunut myös elektroniikkaan, tietoliikennetekniikkaan ja ohjelmointiin. Nykyisin pelailun lisäksi hiukan C# ja PHP ohjelmointia harrastuksena."
+		en = "Born and raised in Rovaniemi, an engineer for whom computers have been my hobby since childhood. Trained in electronics, information technology and programming in school. Todays hobbies are gaming, C# and PHP programming."
 	
 	[params.some]
-		otsikko = "Linkit"
-		otsikko_en = "Links"
+		fi = "Linkit"
+		en = "Links"
 
 		[[params.some.lista]]
 			ikoni = "svg/email.svg"
@@ -46,25 +49,31 @@ enableGitInfo = true
 			name = "Linkedin"
 
 	[params.kieli]
-		otsikko = "Kielitaito"
-		otsikko_en = "Languages"
+		[params.kieli.otsikko]
+			fi = "Kielitaito"
+			en = "Languages"
 
 		[[params.kieli.lista]]
-			kieli = "Suomi"
-			taso = "Äidinkieli"
-			kieli_en = "Finnish"
-			taso_en = "Native"
+			[params.kieli.lista.kieli]
+				fi = "Suomi"
+				en = "Finnish" 
+			[params.kieli.lista.taso]
+				fi = "Äidinkieli"
+				en = "Native"
 				
 		[[params.kieli.lista]]
-			kieli = "Englanti"
-			taso = "Erinomainen"
-			kieli_en = "English"
-			taso_en = "Excellent"
+			[params.kieli.lista.kieli]
+				fi = "Englanti"
+				en = "English" 
+			[params.kieli.lista.taso]
+				fi = "Erinomainen"
+				en = "Excellent"
 
 	[params.tyokokemus]
-		otsikko = "Työkokemus"
-		otsikko_en = "Work experience"
 		ikoni = "svg/work.svg"
+		[params.tyokokemus.otsikko]
+			fi = "Työkokemus"
+			en = "Work experience"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Web Developer"
@@ -105,13 +114,14 @@ enableGitInfo = true
 			paikka = "Laboratorioinsinööri, siviilipalvelus"
 			aika = "2011 - 2012"
 			url = "https://www.lapinamk.fi"
-			yritys = "Lapland University of Applied Sciences"
+			yritys = "Rovaniemi University of Applied Sciences"
 			logo = "svg/ramk.svg"
 
 	[params.koulutus]
-		otsikko = "Koulutus"
-		otsikko_en = "Education"
 		ikoni = "svg/graduation.svg"
+		[params.koulutus.otsikko]
+			fi = "Koulutus"
+			en = "Education"
 
 		[[params.koulutus.lista]]
 			tutkinto = "Liiketoiminnan ammattitutkinto"
@@ -124,7 +134,7 @@ enableGitInfo = true
 		[[params.koulutus.lista]]
 			tutkinto = "Bachelor of Engineering"
 			tarkennus = "Degree Programme in Information Technology"
-			koulu = "Lapland University of Applied Sciences"
+			koulu = "Rovaniemi University of Applied Sciences"
 			url = "https://www.lapinamk.fi"
 			aika = "2007 - 2012"
 			lopputyo = "Arduino Shield Designs for Electronics Laboratory Studies"
@@ -142,27 +152,31 @@ enableGitInfo = true
 		[[params.koulutus.lista]]
 			tutkinto = "Ylioppilastutkinto"
 			koulu = "Rovaniemen aikuislukio"
-			url = "http://www.rovaniemenaikuislukio.fi"
+			url = "https://www.rovaniemenaikuislukio.fi"
 			aika = "2001 - 2006"
 			logo = "svg/lukio.svg"
 
 	[params.projektit]
-		otsikko = "Projektit"
-		otsikko_en = "Projects"
 		ikoni = "svg/hobby.svg"
+		[params.projektit.otsikko]
+			fi = "Projektit"
+			en = "Projects"
 
 		[[params.projektit.lista]]
-			asia = "paint.net suomeksi"
-			asia_en = "paint.net in finnish"
 			url = "https://paint.ruokamo.eu"
-			selitys = "paint.net kuvankäsittelyohjelman suomenkielinen käännös ja ohje."
-			selitys_en = "Finnish translation and guide for the paint.net image editor"
+			[params.projektit.lista.asia]
+				fi = "paint.net suomeksi"
+				en = "paint.net in finnish"
+			[params.projektit.lista.selitys]
+				fi = "paint.net kuvankäsittelyohjelman suomenkielinen käännös ja ohje."
+				en = "Finnish translation and guide for the paint.net image editor"
 
 		[[params.projektit.lista]]
-			asia = "OpenRaster Filetype"
-			asia_en = "OpenRaster Filetype"
 			url = "https://github.com/Zagna/openraster_pdn"
-			selitys = "paint.net kuvankäsittelyohjelman lisäosa tiedostotyypin OpenRaster (.ora) avaamiseen ja tallentamiseen."
-			selitys_en = "Plugin for opening and saving OpenRaster (.ora) files for the paint.net image editor"
+			[params.projektit.lista.asia]
+				fi = "OpenRaster Filetype"
+				en = "OpenRaster Filetype"
+			[params.projektit.lista.selitys]
+				fi = "paint.net kuvankäsittelyohjelman lisäosa tiedostotyypin OpenRaster (.ora) avaamiseen ja tallentamiseen."
+				en = "Plugin for opening and saving OpenRaster (.ora) files for the paint.net image editor"
 
-			

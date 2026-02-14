@@ -34,19 +34,24 @@ enableGitInfo = true
 			name = "Instagram"
 
 		[[params.some.lista]]
-			ikoni = "svg/x.svg"
-			url = "https://x.com/zagna85"
-			name = "X"
-
-		[[params.some.lista]]
 			ikoni = "svg/github.svg"
 			url = "https://github.com/Zagna"
 			name = "Github"
 
 		[[params.some.lista]]
+			ikoni = "svg/bluesky.svg"
+			url = "https://bsky.app/profile/jarno.ruokamo.eu"
+			name = "Bluesky"
+
+		[[params.some.lista]]
 			ikoni = "svg/linkedin.svg"
 			url = "https://www.linkedin.com/in/jarno-ruokamo/"
 			name = "Linkedin"
+
+		[[params.some.lista]]
+			ikoni = "svg/x.svg"
+			url = "https://x.com/zagna85"
+			name = "X"
 
 	[params.kieli]
 		[params.kieli.otsikko]
@@ -81,6 +86,7 @@ enableGitInfo = true
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 			logo = "svg/hoyry.svg"
+			tarkennus = "Wordpress & Laravel"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
@@ -88,6 +94,7 @@ enableGitInfo = true
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 			logo = "svg/hoyry.svg"
+			tarkennus = "Wordpress"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
@@ -95,6 +102,7 @@ enableGitInfo = true
 			url = "https://eduro.fi"
 			yritys = "Eduro-säätiö"
 			logo = "svg/eduro.svg"
+			tarkennus = "Wordpress"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Harjoittelija"
@@ -102,6 +110,7 @@ enableGitInfo = true
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 			logo = "svg/hoyry.svg"
+			tarkennus = "Wordpress"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Suunnittelija"
@@ -164,6 +173,7 @@ enableGitInfo = true
 
 		[[params.projektit.lista]]
 			url = "https://paint.ruokamo.eu"
+			logo = "img/pdn.webp"
 			[params.projektit.lista.asia]
 				fi = "paint.net suomeksi"
 				en = "paint.net in finnish"
@@ -173,6 +183,7 @@ enableGitInfo = true
 
 		[[params.projektit.lista]]
 			url = "https://github.com/Zagna/openraster_pdn"
+			logo = "img/pdn.webp"
 			[params.projektit.lista.asia]
 				fi = "OpenRaster Filetype"
 				en = "OpenRaster Filetype"

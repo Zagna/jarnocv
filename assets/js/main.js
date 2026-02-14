@@ -8,12 +8,13 @@ for(let event of events) {
 }
 
 document.querySelectorAll('[data-en]').forEach(function(el) {
-	el.dataset.fi = el.innerHTML;
+	el.dataset.fi = el.innerText;
 });
 
 function changeLanguage(lang) {
+	document.documentElement.setAttribute('lang', lang);
 	document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
-		el.innerHTML = el.dataset[lang];
+		el.innerText = el.dataset[lang];
 	});
 }
 

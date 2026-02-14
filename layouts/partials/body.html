@@ -3,10 +3,8 @@
 		<h1>{{ .Site.Params.nimi }}</h1>
 		{{ $image := resources.Get "img/profile.webp" }}
 		{{ $webp := $image.Resize "512x512 webp" | fingerprint }}
-		{{ $jpeg := $image.Resize "512x512 jpeg" | fingerprint }}
 		<picture>
-			<source type="image/webp" srcset="{{ $webp.RelPermalink }}">
-			<img src="{{ $jpeg.RelPermalink }}" width="256" height="256" alt="Henkilökuva">
+			<img src="{{ $webp.RelPermalink }}" width="256" height="256" alt="Henkilökuva">
 		</picture>
 		<h2 class="sr">{{ .Site.Params.otsikko }}</h2>
 		<some-list>
@@ -14,7 +12,7 @@
 				<a target="_blank" href="{{ .url | safeURL }}">
 					<span class="sr">{{ .name }}</span>
 					{{ $ikoni := resources.Get .ikoni | fingerprint }}
-					<img src="{{ $ikoni.RelPermalink }}" width="48" height="48" alt="">
+					<img src="{{ $ikoni.RelPermalink }}" alt="{{ .name }}">
 				</a>
 			{{ end }}
 		</some-list>
@@ -50,6 +48,7 @@
 					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
 				{{ end }}
 				<h3>{{ .paikka | markdownify }}</h3>
+				{{ with .tarkennus }}<small><span> &middot; </span>{{ . }}</small>{{ end }}
 				<p>
 					{{ if .url }}
 						<a href="{{ .url | safeURL }}">
@@ -75,7 +74,8 @@
 					{{ $ikoni := resources.Get . | fingerprint }}
 					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
 				{{ end }}
-				<h3>{{ .tutkinto | markdownify }}{{ with .tarkennus }} &middot; <small>{{ . }}</small>{{ end }}</h3>
+				<h3>{{ .tutkinto | markdownify }}</h3>
+				{{ with .tarkennus }}<small><span> &middot; </span>{{ . }}</small>{{ end }}
 				<p>
 					{{ if .url }}
 						<a href="{{ .url | safeURL }}">
@@ -100,6 +100,10 @@
 		</h2>
 		{{ range .Site.Params.projektit.lista }}
 			<item-list>
+				{{ with .logo }}
+					{{ $ikoni := resources.Get . | fingerprint }}
+					<img src="{{ $ikoni.RelPermalink }}" width="32" height="32">
+				{{ end }}
 				<h3><a data-en="{{ .asia.en | markdownify | safeHTMLAttr }}" href="{{ .url | safeURL }}">{{ .asia.fi | markdownify }}</a></h3>
 				<p data-en="{{ .selitys.en | markdownify | safeHTMLAttr }}">{{ .selitys.fi | markdownify }}</p>
 			</item-list>

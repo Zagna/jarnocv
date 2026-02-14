@@ -5,14 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Jarno Ruokamo Curriculum Vitae ja yhteystiedot">
 <link rel="canonical" href="{{ .Permalink }}" />
-{{ if hugo.IsServer }}
-	{{ $style := resources.Get "scss/style.scss" | css.Sass | fingerprint }}
-	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-{{ else }}
-	{{ $options := (dict "outputStyle" "compressed") }}
-	{{ $style := resources.Get "scss/style.scss" | css.Sass $options | fingerprint }}
-	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-{{ end }}
+{{ $style := resources.Get "css/style.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 {{ $fav := resources.Get "img/favicon.png" | fingerprint }}
 {{ $wp := $fav.Resize "48x48 webp" | fingerprint }}
 <link rel="icon" href="{{ $wp.RelPermalink }}" type="image/webp" />

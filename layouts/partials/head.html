@@ -3,10 +3,12 @@
 <meta name="language" content="fi">
 <meta name="author" content="Jarno Ruokamo">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Jarno Ruokamo Curriculum Vitae ja yhteystiedot">
+<meta name="description" content="{{ .Site.Params.esitys.fi }}">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="{{ .Permalink }}" />
-{{ $style := resources.Get "css/style.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+{{ with resources.Get "css/style.css" | minify }}
+    <style>{{ .Content | safeCSS }}</style>
+{{ end }}
 {{ $fav := resources.Get "img/favicon.png" | fingerprint }}
 {{ $wp := $fav.Resize "48x48 webp" | fingerprint }}
 <link rel="icon" href="{{ $wp.RelPermalink }}" type="image/webp" />

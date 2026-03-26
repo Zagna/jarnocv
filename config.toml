@@ -3,6 +3,10 @@ languageCode = 'fi-fi'
 disableKinds = [ "RSS", "taxonomy", "section", "404" ]
 enableGitInfo = true
 
+[caches]
+  	[caches.images]
+		dir = ':cacheDir/images'
+
 [minify]
 	minifyOutput = true
 

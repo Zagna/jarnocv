@@ -14,6 +14,7 @@ enableGitInfo = true
 	nimi = "Jarno Ruokamo"
 	osoite = "jarno.ruokamo.eu"
 	otsikko = "Curriculum Vitae - Jarno Ruokamo"
+	selite = "Pesunkestävä rovaniemeläinen, lapsuudesta tietokoneiden kanssa harrastellut insinööri."
 	[params.esitys]
 		fi = "Pesunkestävä rovaniemeläinen, lapsuudesta tietokoneiden kanssa harrastellut insinööri. Kouluissa tutustunut myös elektroniikkaan, tietoliikennetekniikkaan ja ohjelmointiin. Nykyisin pelailun lisäksi hiukan C# ja PHP ohjelmointia harrastuksena."
 		en = "Born and raised in Rovaniemi, an engineer for whom computers have been my hobby since childhood. Trained in electronics, information technology and programming in school. Todays hobbies are gaming, C# and PHP programming."

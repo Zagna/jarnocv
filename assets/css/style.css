@@ -61,8 +61,6 @@ main {
 
 	& h2 {
 		& img {
-			height: 2rem;
-			width: 2rem;
 			margin-right: .5rem;
 			margin-bottom: .5rem;
 		}

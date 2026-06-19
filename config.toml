@@ -1,5 +1,5 @@
 baseURL = 'https://jarno.ruokamo.eu'
-languageCode = 'fi-fi'
+locale = 'fi'
 disableKinds = [ "RSS", "taxonomy", "section", "404" ]
 enableGitInfo = true
 

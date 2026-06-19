@@ -91,7 +91,7 @@ enableGitInfo = true
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 			logo = "svg/hoyry.svg"
-			tarkennus = "Wordpress & Laravel"
+			tarkennus = "WordPress & Laravel"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
@@ -99,7 +99,7 @@ enableGitInfo = true
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 			logo = "svg/hoyry.svg"
-			tarkennus = "Wordpress"
+			tarkennus = "WordPress"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Junior Web Developer"
@@ -107,7 +107,7 @@ enableGitInfo = true
 			url = "https://eduro.fi"
 			yritys = "Eduro-säätiö"
 			logo = "svg/eduro.svg"
-			tarkennus = "Wordpress"
+			tarkennus = "WordPress"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Harjoittelija"
@@ -115,7 +115,7 @@ enableGitInfo = true
 			url = "https://www.hoyry.net"
 			yritys = "Digi- ja mainostoimisto Höyry"
 			logo = "svg/hoyry.svg"
-			tarkennus = "Wordpress"
+			tarkennus = "WordPress"
 
 		[[params.tyokokemus.lista]]
 			paikka = "Suunnittelija"

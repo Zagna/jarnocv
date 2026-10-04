@@ -125,11 +125,12 @@ enableGitInfo = true
 			logo = "svg/metsa.svg"
 
 		[[params.tyokokemus.lista]]
-			paikka = "Laboratorioinsinööri, siviilipalvelus"
+			paikka = "Laboratorioinsinööri"
 			aika = "2011 - 2012"
 			url = "https://www.lapinamk.fi"
 			yritys = "Rovaniemi University of Applied Sciences"
 			logo = "svg/ramk.svg"
+			tarkennus = "Siviilipalvelus"
 
 	[params.koulutus]
 		ikoni = "svg/graduation.svg"

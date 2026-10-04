@@ -16,6 +16,7 @@ html {
 	font-family: 'Calibri', 'Trebuchet MS', sans-serif;
 	background-color: var(--background);
 	color: var(--text);
+	hyphens: auto;
 
 	& a {
 		color: var(--green);
@@ -43,13 +44,12 @@ small {
 }
 
 body {
-	max-width: 69rem;
+	max-width: 75rem;
 	display: flex;
 	flex-direction: column;
 	padding: 2rem;
 	justify-content: space-between;
 	margin: 0 auto;
-
 }
 
 aside {
@@ -58,7 +58,6 @@ aside {
 
 main {
 	flex: 0 0 61%;
-
 	& h2 {
 		& img {
 			margin-right: .5rem;
@@ -120,7 +119,7 @@ work-experience, school-work, my-hobbies {
 				display: none;
 			}
 		}
-		@media(min-width: 69rem) {
+		@media(min-width: 75rem) {
 			& small {
 				width: initial;
 				margin-left: .25rem;

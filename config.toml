@@ -188,7 +188,7 @@ enableGitInfo = true
 				en = "Finnish translation and guide for the paint.net image editor"
 
 		[[params.projektit.lista]]
-			url = "https://github.com/Zagna/openraster_pdn"
+			url = "https://github.com/Zagna/openraster-pdn"
 			logo = "img/pdn.webp"
 			[params.projektit.lista.asia]
 				fi = "OpenRaster Filetype"

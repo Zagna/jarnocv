@@ -66,6 +66,15 @@ main {
 	}
 }
 
+language-selector {
+	display: flex;
+	& button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
 button {
 	background: none;
 	color: inherit;
